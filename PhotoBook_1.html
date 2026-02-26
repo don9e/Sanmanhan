@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- 📱 모바일 화면 대응 필수 설정 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>산만한시선이 나오기까지</title>
+
+  <!-- 🎨 외부 CSS 파일 연결 (이게 핵심) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+  <audio id="diary-bgm" loop>
+    <source src="images/music/Beautiful Thing.m4a" type="audio/mp4">
+  </audio>
+
+ <div class="container">
+    <a href="PhotoBook.html" style="font-size: 14px;">뒤로가기</a><br><br>
+
+    <h2 style="text-align:center;">
+  <img src="images/산시로고.png" class="emoji" alt="">
+    산만한시선이 나오기까지
+  <img src="images/산시로고.png" class="emoji" alt="">  
+</h2><br><br>
+
+    <div class="card">
+      <img src="images/P_1.png" class="center-img" alt="?" width="350"><br>
+      <img src="images/P_3.png" class="center-img" alt="?" width="350"><br>
+      <img src="images/P_4.png" class="center-img" alt="?" width="350"><br>
+      <img src="images/P_5.png" class="center-img" alt="?" width="350"><br>
+      <img src="images/P_6.png" class="center-img" alt="?" width="350">
+      
+    </div>
+    
+
+    <br><br>
+
+  </div>
+
+  <script>
+    // 사용자가 화면 아무 곳이나 클릭하면 음악 재생 시작
+    document.addEventListener('click', function() {
+        const audio = document.getElementById('diary-bgm');
+        if (audio.paused) {
+            audio.play();
+        }
+    }, { once: true }); // 딱 한 번만 실행되도록 설정
+  </script>
+
+</body>
+</html>
